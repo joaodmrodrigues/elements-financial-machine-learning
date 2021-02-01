@@ -6,8 +6,8 @@
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 
-title: fastpages
-description: An easy to use blogging platform with support for Jupyter Notebooks.
+title: Elements of Financial Machine Learning
+description: A collection of ideas and concepts regarding application of machine learning in finance and trading.
 github_username: joaodmrodrigues
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "elements-financial-machine-learning"
@@ -39,11 +39,12 @@ baseurl: "/elements-financial-machine-learning" # the subpath of your site, e.g.
 # Github and twitter are optional:
 minima:
   social_links:
-    twitter: fastdotai
-    github: fastai
+    #twitter: fastdotai
+    github: joaodmrodrigues
+    linkedin: joaodmrodrigues
 
 # Set this to true to get LaTeX math equation support
-use_math: 
+use_math: true
 
 # Set this to true to display the summary of your blog post under your title on the Home page.
 show_description: true
@@ -58,7 +59,7 @@ annotations: false
 show_tags: true
 
 # Add your Google Analytics ID here if you have one and want to use it
-google_analytics: 
+google_analytics: G-TLQ26X5Q1E
 
 exclude:
   - docker-compose.yml
