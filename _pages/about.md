@@ -14,7 +14,6 @@ Brief resume:
 - <sub> 2019 - 2020: Research Associate @ Imperial College London, machine learning applications in physics; <sub> 
 
 - <sub> 2014 - 2018: PhD in Physics @ University of Lisbon, machine learning description of turbulence; <sub> 
-
-
-
+  
+ <br />  
 For more information check the links in the bottom of this page.
