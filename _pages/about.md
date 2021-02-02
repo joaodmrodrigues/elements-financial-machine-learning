@@ -4,8 +4,11 @@ title: About Me
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+I'm a data scientist and systematic trader on a personal account.
 
+Brief resume:
+2021 - present: Data Scientist @ Argus Media, development of forecast models for commodity markets;
+2019 - 2020: Research Associate @ Imperial College London, machine learning applications in physics;
+2014 - 2018: PhD in Physics @ University of Lisbon, machine learning description of turbulence;
 
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+For more information check the links in the bottom of this page.
