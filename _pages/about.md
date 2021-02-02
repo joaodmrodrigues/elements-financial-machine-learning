@@ -16,4 +16,4 @@ Brief resume:
 - <sub> 2014 - 2018: PhD in Physics @ University of Lisbon, machine learning description of turbulence; <sub> 
   
  <br />  
-For more information check the links in the bottom of this page.
+For more information check the links in the bottom of this page...
