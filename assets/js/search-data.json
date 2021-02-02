@@ -3,9 +3,9 @@
     
         "post0": {
             "title": "This is a test",
-            "content": "This is another test .",
-            "url": "https://joaodmrodrigues.github.io/elements-financial-machine-learning/2021/02/02/test.html",
-            "relUrl": "/2021/02/02/test.html",
+            "content": "toc: true | branch: master | badges: true | comments: true | categories: [testing 1, testjng 2] | image: images/post_image_testing.png | hide: false | search_exclude: false | . This is another test .",
+            "url": "https://joaodmrodrigues.github.io/elements-financial-machine-learning/2021/02/02/template.html",
+            "relUrl": "/2021/02/02/template.html",
             "date": " • Feb 2, 2021"
         }
         
