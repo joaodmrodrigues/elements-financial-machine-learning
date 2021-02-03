@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Title 2",
-            "content": "toc: true | branch: master | badges: true | comments: true | categories: [testing 1, testjng 2] | image: images/post_image_testing.png | hide: false | search_exclude: false | . This is a test . This is another test . Yet another test . testing .",
-            "url": "https://joaodmrodrigues.github.io/elements-financial-machine-learning/2021/02/03/template.html",
-            "relUrl": "/2021/02/03/template.html",
+            "title": "Title 3",
+            "content": "This is a test . This is another test . Yet another test . testing .",
+            "url": "https://joaodmrodrigues.github.io/elements-financial-machine-learning/testing%201/testjng%202/2021/02/03/template.html",
+            "relUrl": "/testing%201/testjng%202/2021/02/03/template.html",
             "date": " • Feb 3, 2021"
         }
         
