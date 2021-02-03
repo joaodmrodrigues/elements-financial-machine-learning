@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Title",
-            "content": "Subtitle . Subsubtitle . And some text here . var1 = 5 . .",
+            "content": "Subtitle . Subsubtitle . And some text here . var1 = 5 . . This code cell was not shown, only the output . import matplotlib.pyplot as plt import numpy as np x = np.linspace(1, 100, 100) y = np.random.randn(100) plt.plot(x,y) plt.show() .",
             "url": "https://joaodmrodrigues.github.io/elements-financial-machine-learning/cathegory%201/other%20cathegory/2021/02/03/template.html",
             "relUrl": "/cathegory%201/other%20cathegory/2021/02/03/template.html",
             "date": " • Feb 3, 2021"
