@@ -14,7 +14,7 @@ def generate_samples(N, dependence_coef, which_param):
 
 	### Effect
 	inherent_noise = np.random.normal(loc=0.5, scale=1.0, size=N)
-	param = (1-dependence_coef)*inherent_noise + dependence_coef*samples_cause
+	param = normalize((1-dependence_coef)*inherent_noise + dependence_coef*samples_cause)
 
 	samples_effect = list()
 	for i in range(0, N):
@@ -74,6 +74,10 @@ plt.show()
 
 
 
+
+
+
+
 def calculate_entropy(X):
 	# 1) Histograms the samples
 	nbins = int(len(X)**(1/3))
@@ -109,6 +113,21 @@ mutual_information = calculate_mutual_information(X=samples_cause2, Y=samples_ef
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ##########################################
 ##########################################
 
@@ -130,6 +149,12 @@ def calculate_mutual_information_score(X, Y, n_perm):
 	mi_score = (I-np.mean(I_random))/np.std(I_random)
 
 	return mi_score
+
+
+
+
+
+
 
 
 
