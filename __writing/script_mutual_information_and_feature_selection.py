@@ -158,7 +158,6 @@ def calculate_mutual_information_score(X, Y, n_perm):
 
 
 
-
 n_perm = 100
 #mi_score = calculate_mutual_information_score(X=samples_cause1, Y=samples_effect1, n_perm=n_perm)
 #print(mi_score)
