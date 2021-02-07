@@ -169,7 +169,6 @@ n_runs = 100
 strategy1 = list()
 strategy2 = list()
 strategy3 = list()
-mean_kelly_fraction = list()
 hit_ratio = list()
 
 for i in range(0, n_runs):
@@ -199,9 +198,6 @@ for i in range(0, n_runs):
 	fractions3[fractions3<-leverage] = -leverage
 	portfolio3 = calculate_portfolio_growth(portfolio_initial=portfolio_initial, fractions=fractions3, price_returns=returns)
 	strategy3.append(calculate_sharp_ratio(portfolio3))
-
-	# mean kelly fraction
-	mean_kelly_fraction.append(np.mean(np.abs(fractions3)))
 
 	# hit ratio
 	hit_ratio.append(np.sum(np.sign(returns*path_mean)>0)/len(returns))
