@@ -64,6 +64,7 @@ print("Strategy Sharp ratio  =", np.round(sharp_ratio, 2))
 
 
 def calculate_performance_realizations(returns, hit_ratio, backtest_length, n_realizations):
+	realizations = list()
 	total_returns = list()
 	sharp_ratios = list()
 
@@ -81,19 +82,58 @@ def calculate_performance_realizations(returns, hit_ratio, backtest_length, n_re
 
 		strategy_returns = np.random.permutation(strategy_returns)[0:backtest_length]
 
+		realizations.append(strategy_returns)
 		total_returns.append(np.sum(strategy_returns))
 		sharp_ratios.append(np.sqrt(252)*np.mean(strategy_returns)/np.std(strategy_returns))
 
-	return (np.array(total_returns), np.array(sharp_ratios))
+	return (np.array(realizations), np.array(total_returns), np.array(sharp_ratios))
 
 
 
 
 
-(total_returns, sharp_ratios) = calculate_performance_realizations(returns=returns, hit_ratio=0.50, backtest_length=252, n_realizations=1000)
+(realizations, total_returns, sharp_ratios) = calculate_performance_realizations(returns=returns, hit_ratio=0.50, backtest_length=252, n_realizations=10000)
+
 
 percentage_profitable = np.sum(total_returns>=0)/len(total_returns)
 print(percentage_profitable)
+
+
+## Sharp ratio statistics
+pdf, bins, patches = plt.hist(x=sharp_ratios, bins=int(len(sharp_ratios)**(1/3)), density=True)
+
+pdf = pdf / np.sum(pdf)
+cmf = np.cumsum(pdf)
+
+
+
+fig, axes = plt.subplots(1, 1, figsize=(5, 4))
+axes.plot(bins[0:-1], 1-cmf, color=(0.8,0.5,0.5,1.0))
+axes.set_xlabel("Sharp ratio")
+axes.set_ylabel("1-Cumulative mass function")
+#axes.set_yscale("log")
+plt.show()
+
+
+#### Case
+
+case_index = np.argsort(sharp_ratios)[-3]
+case_realization = realizations[case_index, :]
+portfolio_growth = 1+np.cumsum(case_realization)
+
+
+plt.plot(portfolio_growth)
+plt.show()
+
+
+
+dfgdf
+
+
+
+
+
+
 
 
 
@@ -113,7 +153,7 @@ for hit_ratio in hit_ratios:
 	aux = list()
 	for backtest_length in backtest_lengths:
 
-		(total_returns, sharp_ratios) = calculate_performance_realizations(returns=returns, hit_ratio=hit_ratio, backtest_length=backtest_length, n_realizations=1000)
+		(realizations, total_returns, sharp_ratios) = calculate_performance_realizations(returns=returns, hit_ratio=hit_ratio, backtest_length=backtest_length, n_realizations=1000)
 
 		percentage_profitable = np.sum(total_returns>=0)/len(total_returns)
 
