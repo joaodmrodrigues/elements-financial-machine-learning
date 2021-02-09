@@ -18,7 +18,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-02-07T00:00:00-06:00" />
 <script type="application/ld+json">
-{"url":"https://joaodmrodrigues.github.io/elements-financial-machine-learning/kelly%20criterion/monte%20carlo/2021/02/07/kelly_criterion_in_trading.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://joaodmrodrigues.github.io/elements-financial-machine-learning/kelly%20criterion/monte%20carlo/2021/02/07/kelly_criterion_in_trading.html"},"headline":"Trading with the Kelly criterion","dateModified":"2021-02-07T00:00:00-06:00","datePublished":"2021-02-07T00:00:00-06:00","author":{"@type":"Person","name":"Joao Rodrigues"},"image":"https://joaodmrodrigues.github.io/elements-financial-machine-learning/images/post_image_kelly_investing.png","description":"How probabilistic forecasts can be fully leveraged to an optimal allocation using the Kelly criterion","@context":"https://schema.org"}</script>
+{"url":"https://joaodmrodrigues.github.io/elements-financial-machine-learning/kelly%20criterion/monte%20carlo/2021/02/07/kelly_criterion_in_trading.html","headline":"Trading with the Kelly criterion","dateModified":"2021-02-07T00:00:00-06:00","datePublished":"2021-02-07T00:00:00-06:00","@type":"BlogPosting","image":"https://joaodmrodrigues.github.io/elements-financial-machine-learning/images/post_image_kelly_investing.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://joaodmrodrigues.github.io/elements-financial-machine-learning/kelly%20criterion/monte%20carlo/2021/02/07/kelly_criterion_in_trading.html"},"author":{"@type":"Person","name":"Joao Rodrigues"},"description":"How probabilistic forecasts can be fully leveraged to an optimal allocation using the Kelly criterion","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/elements-financial-machine-learning/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://joaodmrodrigues.github.io/elements-financial-machine-learning/feed.xml" title="Elements of Financial Machine Learning" /><!-- the google_analytics_id gets auto inserted from the config file -->
 
@@ -179,7 +179,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Forecasting the direction of the next price movement is only part of the problem of trading. A proper capital allocation to that forecast its equally significant, althought is importance is often underestimated. Here, I'm considering the problem of capital allocation on a single strategy, and not that of optimal portfolio allocation when we are investing in more than one instrument, like the framework of Modern Portfolio Theory.</p>
-<p>A remarkable insight into this subject has been given by Kelly<a class="citation" href="#Kelly1956">(Kelly, 1956)</a> . A good introduction to the subject can be found in <a href="https://en.wikipedia.org/wiki/Kelly_criterion">Wikipedia</a>. Thorpe also has a very interesting technical review<sup id="fnref-2" class="footnote-ref"><a href="#fn-2">2</a></sup> and Cover<sup id="fnref-3" class="footnote-ref"><a href="#fn-3">3</a></sup>, like Kelly in its original paper, describes the interesting connections with information theory.</p>
+<p>A remarkable insight into this subject has been given by Kelly<a class="citation" href="#Kelly1956">(Kelly, 1956)</a>. A good introduction to the subject can be found in <a href="https://en.wikipedia.org/wiki/Kelly_criterion">Wikipedia</a>. Thorpe also has a very interesting technical review<a class="citation" href="#Thorp2008">(Thorp, 2008)</a> and Cover<a class="citation" href="#Cover1999">(Cover, 1999)</a>, like Kelly in its original paper, describes the interesting connections with information theory.</p>
 <p>Kelly addresses the problem of optimal capital allocation under a statistically favourable (in expectation) betting opportunity. Two important conclusions from his work are:</p>
 <ol>
 <li>Even in the presence of a favourable bet, over-allocation of capital will lead to ruin in the long run with probability 1.</li>
@@ -215,7 +215,7 @@ $$ P_{t+1} = p_t (1+ f R_t) $$
 <p>
 $$ P_{t+1} = e^{\Lambda}, $$
 </p>
-<p>assuming, without loss of generality, $p_t = 1$. Here, $\Lambda = \mathrm{log}(1 + f R_t)$ is the random variable describing the portfolio growth rate. The Kelly criterion gives the optimal value of $f$ in the sense of maximizing the expected value of $\Lambda$. If $R_t$ follows a normal distribution $\mathcal{N} ( \mu_r, \sigma_r)$, Thorpe<sup id="fnref-2" class="footnote-ref"><a href="#fn-2">2</a></sup> has shown that the Kelly-optimal value of $f$ is given by</p>
+<p>assuming, without loss of generality, $p_t = 1$. Here, $\Lambda = \mathrm{log}(1 + f R_t)$ is the random variable describing the portfolio growth rate. The Kelly criterion gives the optimal value of $f$ in the sense of maximizing the expected value of $\Lambda$. If $R_t$ follows a normal distribution $\mathcal{N} ( \mu_r, \sigma_r)$, Thorp<a class="citation" href="#Thorp2008">(Thorp, 2008)</a> has shown that the Kelly-optimal value of $f$ is given by</p>
 <p>
 $$ f = \frac{\mu_r}{\sigma_r^2}. $$
 </p>
@@ -1039,21 +1039,13 @@ Mean Sharp ratio, Kelly optimal  = 2.16
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>References:</strong></p>
 <p></p>
-<div class="footnotes"><p id="fn-1">1. J. L. Kelly, A New Interpretation of Information Rate, Bell System Technical Journal. <strong>35</strong> (4): 917–926 (1956)<a href="#fnref-1" class="footnote footnotes">↩</a></p></div>
-<p></p>
-<div class="footnotes"><p id="fn-2">2. Edward O. Thorp, The Kelly Criterion in Blackjack, Sports Bettings and the Stock Market, Handbook of Asset and Liability Management, Volume 1 (2006)<a href="#fnref-2" class="footnote footnotes">↩</a></p></div>
-<p></p>
-<div class="footnotes"><p id="fn-3">3. Thomas M. Cover and Joy A. Thomas, Elements of Information Theory, Wiley (2006)<a href="#fnref-3" class="footnote footnotes">↩</a></p></div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p></p>
-<ol class="bibliography"><li><span id="Kelly1956">Kelly, J. L. (1956). A new interpretation of information rate. <i>The Bell System Technical Journal</i>, <i>35</i>(4), 917–926. https://doi.org/10.1002/j.1538-7305.1956.tb03809.x</span></li></ol>
+<ol class="bibliography">
+<li><span id="Kelly1956">Kelly, J. L. (1956). A new interpretation of information rate. <i>The Bell System Technical Journal</i>, <i>35</i>(4), 917–926. https://doi.org/10.1002/j.1538-7305.1956.tb03809.x</span></li>
+<li><span id="Thorp2008">Thorp, E. O. (2008). The Kelly criterion in blackjack sports betting, and the stock market. In <i>Handbook of asset and liability management</i> (pp. 385–428). Elsevier.</span></li>
+<li><span id="Cover1999">Cover, T. M. (1999). <i>Elements of information theory</i>. John Wiley &amp; Sons.</span></li>
+</ol>
 
 </div>
 </div>
