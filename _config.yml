@@ -7,7 +7,7 @@
 # https://learnxinyminutes.com/docs/yaml/
 
 title: Elements of Financial Machine Learning
-description: A collection of ideas and concepts regarding application of machine learning in finance and trading.
+description: A collection of ideas and concepts on machine learning for finance and trading.
 github_username: joaodmrodrigues
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "elements-financial-machine-learning"
